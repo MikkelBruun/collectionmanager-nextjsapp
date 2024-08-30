@@ -1,0 +1,77 @@
+.deckPickerContainer{
+    display: flex;
+    align-items: stretch;
+}
+.deckPickerContainer>button{
+    /* height: var(--card-thumbnail-height); */
+    width: var(--card-thumbnail-width);
+    font-size: 28px;
+}
+.deckPickerContainer>*{
+    margin: 10px;
+}
+.deckBuilderContainer{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    position: relative;
+}
+.deckVisualizer{
+    position: sticky;
+    top: 0;
+    height: 100%;
+    max-height: 100vh;
+    width: min-content;
+    height: 100%;
+    background-color: var(--input-field-color);
+    border: var(--default-border);
+}
+.saveButton{
+    min-width: var(--card-width-small);
+    min-height: var(--card-height-small);
+
+    font-size: 26px;
+    padding: 0;
+    box-sizing: content-box;
+    border-radius: 0;
+}
+.deckElement{
+    background-color: var(--input-pressable-color);
+    border: var(--default-border);
+    border-radius: 2px;
+}
+.deckFace{
+    height: var(--card-thumbnail-height);
+    width: var(--card-thumbnail-width);
+    position: relative;
+    background-color: red;
+}
+.representative1,
+.representative2{
+    position: absolute;
+    min-width: var(--card-thumbnail-width);
+    max-width: var(--card-thumbnail-width);
+    min-height: var(--card-thumbnail-height);
+    max-height: var(--card-thumbnail-height);
+    overflow: hidden;
+    
+}
+.representative1>img,
+.representative2>img{
+    position: absolute;
+}
+.representative1{
+    top: 0;
+    left: 0;
+}
+.representative1>img{
+    left: -32px;
+}
+.representative2{
+    bottom: 0;
+    right: 0;
+    mask-image: linear-gradient(-0.2turn, white 35%, transparent 40%);
+}
+.representative2>img {
+    right: -23px;
+}
+

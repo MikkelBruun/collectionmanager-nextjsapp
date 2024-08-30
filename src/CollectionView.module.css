@@ -1,0 +1,107 @@
+.collection{
+    display: grid;
+    grid-template-columns: min-content auto;
+    position: relative;
+    --control-height: 1.5rem;
+}
+
+
+.container, .horizontalContainer{
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+.container{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.horizontalContainer{
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.cardField{
+    position: relative;
+}
+
+.unowned img {
+    /* opacity: 1; */
+    opacity: .8;
+}
+.cardControls {
+    
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    background-color: var(--input-field-color);
+    width: min-content;
+    align-items: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid var(--input-border-color);
+    border-radius: calc(var(--control-height) / 3.0);
+    overflow: hidden;
+}
+.cardControls > *{
+    
+    min-height: var(--control-height); 
+    min-width: var(--control-height);
+    max-height: var(--control-height);
+    max-width: var(--control-height);
+    line-height: var(--control-height);
+    padding: 0;
+    border: none;
+    border-right: 1px solid var(--input-border-color);
+}
+.twoNum {
+    max-width: calc(1.5 * var(--control-height));
+    min-width:calc(1.5 * var(--control-height));
+}
+.cardControls>*:last-child{
+    border: none;
+}
+
+
+
+.searchPanel{
+    position: sticky;
+    top: 0;
+    height: 100%;
+    max-height: 100vh;
+    background-color: var(--panel-color);
+    padding: 1rem;
+}
+.headerControls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .3em;
+    margin-bottom: 1em;
+}
+
+.searchPanel > form{
+    display: inline-grid;
+    grid-template-columns: max-content 1fr;
+    justify-items: start;
+    align-items: center;
+    row-gap: .5rem;
+    
+    
+}
+.searchPanel input{
+    min-height: var(--control-height);
+    max-height: var(--control-height);
+}
+/* square controls */
+.searchPanel input[type=checkbox]{
+    min-width: var(--control-height);
+    max-width: var(--control-height);
+}
+.inDeckbuilder{
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.inDeckbuilder:hover{
+    border-color: var(--input-border-color);
+}
+.inDeckbuilder button{
+    /* display: none; */
+}
